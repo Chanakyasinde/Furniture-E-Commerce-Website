@@ -1,3 +1,5 @@
+import comfortBanner from '/images/products/comfort-banner.jpg';
+
 export default function ComfortBanner() {
   return (
     <section className="relative min-h-[400px] md:min-h-[500px] bg-primary-50 overflow-hidden">
@@ -13,11 +15,11 @@ export default function ComfortBanner() {
         </div>
       </div>
       <div className="absolute inset-0 z-0">
-        <img 
-          src="/src/assets/comfort-banner.jpg" 
-          alt="Comfortable seating area" 
-          className="w-full h-full object-cover"
-        />
+      <img 
+        src={comfortBanner} 
+        alt="Comfortable seating area" 
+        className="w-full h-full object-cover"
+      />
       </div>
     </section>
   );

@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
+import heroImage from '/images/products/hero-chair.jpg'; // path relative to public folder or src
 
 export default function Hero() {
   return (
     <section 
       style={{
-        backgroundImage: "url('/src/assets/hero-chair.jpg')",
+        backgroundImage: `url(${heroImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
