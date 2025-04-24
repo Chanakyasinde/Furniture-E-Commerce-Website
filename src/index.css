@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: #333;
+  background-color: #faf9f7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+button {
+  border-radius: 0;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.2s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 1440px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+/* Category card hover effect */
+.category-card {
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Button styles */
+.btn {
+  @apply px-6 py-3 font-medium transition-all duration-200;
+}
+
+.btn-primary {
+  @apply bg-primary-700 text-white hover:bg-primary-800;
+}
+
+.btn-secondary {
+  @apply bg-white border border-gray-300 text-gray-800 hover:bg-gray-50;
+}
+
+.btn-cart {
+  @apply bg-accent-500 text-white hover:bg-accent-600;
+}
+
+/* Product card styles */
+.product-card {
+  @apply overflow-hidden transition-all duration-300;
+}
+
+.product-card:hover .product-image {
+  @apply scale-105;
+}
+
+.product-image {
+  @apply transition-transform duration-300;
+}
+
+/* Custom animation for fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
