@@ -145,7 +145,7 @@ export default function CartItem({ item }) {
       
       {/* Price */}
       <div className="font-medium text-gray-900 mr-4 mt-4 sm:mt-0">
-        ${(item.price * item.quantity).toLocaleString()}
+        ₹{(item.price * item.quantity).toLocaleString()}
       </div>
       
       {/* Remove button */}

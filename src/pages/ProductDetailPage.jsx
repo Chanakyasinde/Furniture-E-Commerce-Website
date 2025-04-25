@@ -76,7 +76,7 @@ export default function ProductDetailPage() {
           </div>
           
           <p className="text-2xl font-medium text-gray-900 mb-6">
-            ${product.price.toLocaleString()}
+          ₹{product.price.toLocaleString()}
           </p>
           
           <p className="text-gray-700 mb-6">{product.description}</p>

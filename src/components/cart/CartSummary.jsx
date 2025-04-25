@@ -114,25 +114,25 @@ export default function CartSummary({ totalAmount }) {
       <div className="space-y-3 mb-6">
         <div className="flex justify-between">
           <span className="text-gray-600">Subtotal</span>
-          <span className="font-medium">${totalAmount.toLocaleString()}</span>
+          <span className="font-medium">₹{totalAmount.toLocaleString()}</span>
         </div>
         
         <div className="flex justify-between">
           <span className="text-gray-600">Shipping</span>
           <span className="font-medium">
-            {shippingCost === 0 ? 'Free' : `$${shippingCost}`}
+            {shippingCost === 0 ? 'Free' : `₹${shippingCost}`}
           </span>
         </div>
         
         <div className="flex justify-between">
-          <span className="text-gray-600">Estimated Tax</span>
-          <span className="font-medium">${estimatedTax.toFixed(2)}</span>
+          <span className="text-gray-600">GST (18%)</span>
+          <span className="font-medium">₹{estimatedTax.toFixed(2)}</span>
         </div>
         
         <div className="border-t border-gray-200 pt-3 mt-3">
           <div className="flex justify-between font-semibold">
             <span>Order Total</span>
-            <span>${orderTotal.toFixed(2)}</span>
+            <span>₹{orderTotal.toFixed(2)}</span>
           </div>
         </div>
       </div>

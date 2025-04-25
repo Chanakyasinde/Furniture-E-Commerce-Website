@@ -6,7 +6,7 @@ export default function ProductList({ products, initialFilters = {} }) {
   const [filters, setFilters] = useState({
     category: initialFilters.category || 'all',
     sortBy: initialFilters.sortBy || 'featured',
-    priceRange: initialFilters.priceRange || [0, 2000],
+    priceRange: initialFilters.priceRange || [0, 100000],
   });
 
   useEffect(() => {
@@ -106,7 +106,7 @@ export default function ProductList({ products, initialFilters = {} }) {
         
         <div className="sm:w-1/3">
           <label className="block text-sm font-medium text-gray-700 mb-1">
-            Price Range
+            Price Range (₹)
           </label>
           <div className="flex items-center gap-2">
             <input
